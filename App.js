@@ -90,6 +90,15 @@ export default function App() {
         </View>
         <View style={styles.main}>
           <View style={styles.content}>
+            {!isTabletOrMobileDevice && <View style={{ position: 'absolute', right: 0, top: 0 }}>
+              <Image
+                resizeMode='center'
+                style={styles.logo}
+                source={{
+                  uri: 'https://reactnative.dev/img/tiny_logo.png',
+                }}
+              />
+            </View>}
             <Text>
               Jméno
             </Text>
